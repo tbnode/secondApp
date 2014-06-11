@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  
+  h3= lastSubmit
+  
+  form(action='/handler2', method='post')
+    input(type='text', name='myInput')
+    input(type='submit')
+    
+    ul
+      each item in items
+        li= item.myTerm
